@@ -11,6 +11,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="nav-bar">
+      <%= link_to "Wikinimous", articles_path %>
+      <%= link_to "New Article", new_article_path %>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <%= render "flash" %>
+
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
